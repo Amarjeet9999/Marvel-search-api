@@ -10,4 +10,57 @@
   height: 100vh;
   width: 100%;
   position: fixed;
+  object-fit: cover;
+}
+
+.details {
+  position: absolute;
+  height: 500px;
+  width: 850px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-image: linear-gradient(#b81141, #da1313, #da1313, #cc003b);
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.details:hover {
+  transform: scale(1.009);
+}
+
+.first {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+.imgDiv {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+.imgDiv img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 0 0 25px;
+  object-fit: cover;
+}
+
+.second {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 20px;
+  color: white;
+  white-space: nowrap;
+  height: 50px;
+  margin: auto;
 }

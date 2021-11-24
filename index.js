@@ -49,6 +49,7 @@ const appendData = (data) => {
     suggestions.addEventListener("click", () => {
       localStorage.setItem("hero", JSON.stringify(el));
       window.location.href = "./detailsPage.html";
+      btn.value = "";
     });
     searchSuggestions.append(suggestions);
   });

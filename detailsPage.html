@@ -15,6 +15,24 @@
   <body>
     <div class="root">
       <div class="bgImg"></div>
+      <div class="details">
+        <div class="first">
+          <div class="imgDiv">
+            <img id="img" src="" alt="" />
+          </div>
+        </div>
+        <div class="second">
+          <div class="name">
+            <h1 id="name"></h1>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+
+<script>
+  let data = JSON.parse(localStorage.getItem("hero"));
+  document.getElementById("img").src = data?.image?.url;
+  document.getElementById("name").innerText = `Name : ${data?.name}`;
+</script>
