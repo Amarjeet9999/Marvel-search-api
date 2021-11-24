@@ -63,6 +63,12 @@
   color: #fff3e4;
   font-size: 18px;
 }
+
+.searchDiv:hover {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
 .searchDiv span {
   margin-right: 15px;
   background-color: rgb(255, 255, 255);
