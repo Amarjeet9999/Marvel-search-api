@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bgImg {
+  background-image: url("./Images/2.jpg");
+  filter: blur(3px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}

@@ -45,8 +45,11 @@ const appendData = (data) => {
     gender.setAttribute("class", "gender");
     gender.innerHTML = el.appearance.gender;
     second.append(gender);
-
     suggestions.append(first, second);
+    suggestions.addEventListener("click", () => {
+      localStorage.setItem("hero", JSON.stringify(el));
+      window.location.href = "./detailsPage.html";
+    });
     searchSuggestions.append(suggestions);
   });
 };
