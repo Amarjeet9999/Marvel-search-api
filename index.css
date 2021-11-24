@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto:wght@100;300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .bgImg {
@@ -45,7 +49,7 @@
   margin: auto;
   display: flex;
   background-color: #483434;
-  border-radius: 15px;
+  border-radius: 15px 15px;
   align-items: center;
 }
 
@@ -74,11 +78,31 @@
 .searchSuggestions {
   height: auto;
   width: 600px;
-  /* border: 2px solid rgb(144, 0, 240); */
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 0 0 15px 15px;
 }
 
 .suggestions {
   height: 60px;
   width: 100%;
-  /* border: 5px solid yellowgreen; */
+  background-color: azure;
+  border: 1px solid yellowgreen;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 25px;
+  justify-content: space-between;
+}
+
+.suggestions:hover {
+  background-color: rgb(230, 36, 41);
+  color: white;
+  cursor: pointer;
+}
+.suggestions:last-child {
+  border-radius: 0 0 15px 15px;
+}
+
+.gender {
+  font-size: 15px;
 }
