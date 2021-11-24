@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 .details:hover {
-  transform: scale(1.009);
+  transform: scale(1.05);
 }
 
 .first {
@@ -63,4 +63,14 @@
   white-space: nowrap;
   height: 50px;
   margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 25px;
+  }
+  .details {
+    width: 80%;
+    height: 400px;
+  }
 }

@@ -115,3 +115,16 @@
 .gender {
   font-size: 15px;
 }
+
+@media screen and (max-width: 800px) {
+  .searchDiv,
+  .searchSuggestions {
+    width: 70%;
+    margin: auto;
+  }
+  .searchDiv span {
+    height: 30px;
+    width: 35px;
+    display: flex;
+  }
+}
