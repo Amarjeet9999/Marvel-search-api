@@ -86,13 +86,13 @@
   width: 600px;
   animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 0 0 15px 15px;
+  background-image: linear-gradient(#b38290, #ee6464, #9ee67e, #6db4c0);
 }
 
 .suggestions {
   height: 60px;
   width: 100%;
-  background-color: azure;
-  border: 1px solid yellowgreen;
+  background-color: transparent;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -104,6 +104,9 @@
   background-color: rgb(230, 36, 41);
   color: white;
   cursor: pointer;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
 }
 .suggestions:last-child {
   border-radius: 0 0 15px 15px;
