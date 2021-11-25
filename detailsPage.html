@@ -33,6 +33,9 @@
 
 <script>
   let data = JSON.parse(localStorage.getItem("hero"));
-  document.getElementById("img").src = data?.image?.url;
+  let dataImage =
+    data?.thumbnail?.path + "/portrait_uncanny." + data?.thumbnail?.extension;
+  console.log(dataImage);
+  document.getElementById("img").src = dataImage;
   document.getElementById("name").innerText = `Name : ${data?.name}`;
 </script>

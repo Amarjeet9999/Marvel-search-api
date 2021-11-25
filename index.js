@@ -7,16 +7,16 @@ function debouncer(func, delay) {
 }
 
 var btn = document.getElementById("query");
-btn.addEventListener("input", debouncer(searchResults, 400));
+btn.addEventListener("input", debouncer(searchResults, 100));
 
 async function searchResults() {
   try {
     await fetch(
-      `https://superheroapi.com/api/115579674276732/search/${btn.value}`
+      `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${btn.value}&ts=1&orderBy=name&limit=10&apikey=01b3b629464107fc093ef7608214cb20&hash=f29c8df07d6487c83aa556b6dbeaa751 `
     )
       .then((res) => res.json())
       .then((res) => {
-        appendData(res.results);
+        appendData(res?.data?.results);
       });
   } catch (err) {
     console.log("Error", err);
@@ -38,7 +38,6 @@ const appendData = (data) => {
     data.forEach((el) => {
       let suggestions = document.createElement("div");
       suggestions.setAttribute("class", "suggestions");
-
       let first = document.createElement("div");
       let name = document.createElement("p");
       name.setAttribute("class", "name");
@@ -47,7 +46,7 @@ const appendData = (data) => {
       let second = document.createElement("div");
       let gender = document.createElement("p");
       gender.setAttribute("class", "gender");
-      gender.innerHTML = el.appearance.gender;
+      // gender.innerHTML = el.appearance.gender;
       second.append(gender);
       suggestions.append(first, second);
       suggestions.addEventListener("click", () => {
